@@ -21,11 +21,11 @@ def func(*c):
     # ls =[]
     l = len(c)
     sum = 0
-    for i in c:
+    for i in c:         #求传入数据的总和
         sum = sum +i
-    d = sum/l
+    d = sum/l           #求平均值
     print(d)
-    for i in c:
+    for i in c:         #输出大于平均值的数据
         if d < i:
             print(i)
 func(1,2,3,34)
