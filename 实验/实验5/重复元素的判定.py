@@ -7,8 +7,7 @@ def judge(list):
     for i in range(lenth):
         s.add(list[i])
         if len(s) != (i+1):
-
             return True
     return False
-a = [1,12,2]
+a = [1,12,2,2]
 print(judge(a))
