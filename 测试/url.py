@@ -16,5 +16,5 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # 获取一个post请求 通过httpbin.org网站的响应
 data = bytes(urllib.parse.urlencode({"hello":"world"}),encoding="utf-8")
 response = urllib.request.urlopen('http://httpbin.org/post',data=data)
-print(response.read())
+print(response.read().decode("utf-8"))
 
