@@ -11,3 +11,6 @@ response = urllib.request.urlopen("https://yyxuezhang.top")
 # print(response)
 # print(response.read())
 print(response.read().decode('utf-8'))
+
+# 获取一个post请求 通过httpbin.org网站的响应
+
