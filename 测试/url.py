@@ -42,14 +42,24 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 #爬取的时候不然服务器知道自己是爬虫
 # url = "https://www.douban.com"
-url = "http://httpbin.org/post"
-data = bytes(urllib.parse.urlencode({"hello":'ok'}),encoding="utf-8")
+# url = "http://httpbin.org/post"
+# data = bytes(urllib.parse.urlencode({"hello":'ok'}),encoding="utf-8")
+# headers = {
+# "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30'
+# }
+# req = urllib.request.Request(url=url,data=data,headers=headers,method="POST")
+# response = urllib.request.urlopen(req)
+# print(response.read().decode('utf-8'))
+
+url = "https://www.douban.com"
+# data = bytes(urllib.parse.urlencode({"hello":'ok'}),encoding="utf-8")
 headers = {
 "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.30'
 }
-req = urllib.request.Request(url=url,data=data,headers=headers,method="POST")
+req = urllib.request.Request(url=url,headers=headers)
 response = urllib.request.urlopen(req)
 print(response.read().decode('utf-8'))
+
 
 
 
