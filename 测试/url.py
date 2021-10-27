@@ -14,7 +14,17 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # print(response.read().decode('utf-8'))
 
 # 获取一个post请求 通过httpbin.org网站的响应
-data = bytes(urllib.parse.urlencode({"hello":"world"}),encoding="utf-8")
-response = urllib.request.urlopen('http://httpbin.org/post',data=data)
-print(response.read().decode("utf-8"))
+# data = bytes(urllib.parse.urlencode({"hello":"world"}),encoding="utf-8")
+# response = urllib.request.urlopen('http://httpbin.org/post',data=data)
+# print(response.read().decode("utf-8"))
 
+# data = bytes(urllib.parse.urlencode({"hahaha":'ok'}),encoding="utf-8")
+# try:
+#     response = urllib.request.urlopen('http://httpbin.org/post',timeout=1)
+#     print(response.read().decode('utf-8'))
+# except urllib.error.HTTPError as e:
+#     print('time out!')
+
+
+response = urllib.request.urlopen("http://httpbin.org/get")
+print(response.status)
