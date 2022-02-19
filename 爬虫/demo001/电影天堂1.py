@@ -8,6 +8,11 @@ headers = {
 }
 domain = "https://m.dytt8.net/index2.htm"
 # domain = "https://www.dytt89.com/"
+
 resp = requests.get(domain,verify=False,headers=headers)    #verify=False 去掉安全验证
 resp.encoding = "gb2312"
-print(resp.text)
+# resp.encoding = "ISO-8859-1"
+# resp.encoding = "gbk"
+# resp.close()
+print(resp.content)
+resp.close()
