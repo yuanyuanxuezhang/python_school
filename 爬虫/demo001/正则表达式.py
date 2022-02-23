@@ -43,8 +43,10 @@ s = """
 obj = re.compile(r'<div class=".*?"><span id="\d+">(?P<html_text>.*?)</span></div>',re.S)
 
 result = obj.finditer(s)
+print("测试")
 for it in result:
     print(it.group())
 result = obj.finditer(s)
 for it in result:
     print(it.group("html_text"))
+print(result)

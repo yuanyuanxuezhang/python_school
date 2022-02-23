@@ -4,10 +4,12 @@
 import requests
 import time
 
+
+base_url = "https://qlogo3.store.qq.com/qzone/qqnum/qqnum/640?1641770956"
 headers = {
 "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Mobile Safari/537.36"
 }
-base_url = "http://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=qqnum&src_uin=www.feifeiboke.com&fid=blog&spec=640"
+# base_url = "http://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=qqnum&src_uin=www.feifeiboke.com&fid=blog&spec=640"
 print(type(base_url))
 url_p = str(input("请输入QQ账号"))
 url = base_url.replace('qqnum',url_p)
