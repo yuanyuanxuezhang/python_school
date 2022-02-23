@@ -15,11 +15,11 @@ while(True):
     obj = re.compile(r'"imgurl":"(?P<imgurl>.*?)"}]}',re.S)
     # print(obj.finditer(resp.text))
     result = obj.finditer(resp.text)
-    for it in result:
-        i_url = it.group("imgurl")
+    for it in result:       #不循环遍历无法获取url
+        i_url = it.group("imgurl")      #获取指定部分类容
         print(it.group("imgurl"))
     i_url_name = i_url
-    i_url_name = i_url_name.replace(':',"a")
+    i_url_name = i_url_name.replace(':',"a")        #去除重命名中的特殊字符避免无法创建文件
     i_url_name = i_url_name.replace('/','a')
     i_url_name = i_url_name.replace('?','a')
     i_url_name = i_url_name.replace('=','a')
