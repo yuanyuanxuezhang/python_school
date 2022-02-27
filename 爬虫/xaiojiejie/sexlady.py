@@ -11,8 +11,6 @@ headers = {
 }
 num = 135
 
-
-
 while(True):
     resp = requests.get(url, headers=headers)
     img_name = str(num)+".jpg"     #给写入的文件加入拓展名
